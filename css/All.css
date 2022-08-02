@@ -1,0 +1,514 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+}
+
+/*****************/
+/* End CSS Reset */
+/*****************/
+
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Microsoft JhengHei';
+}
+
+/**********/
+/* Header */
+/**********/
+
+.header{
+    width: 100%;
+    padding: 10px 10px 0px 10px;
+}
+
+.socialMedia{
+    background-color:#f6f6f6;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.socialMedia .fb{
+    color: #4460a0;
+    background-image: url(../img/facebookIcon.png);
+    background-repeat: no-repeat;
+    text-indent: 30%;
+    min-width: 80px;
+    border-right: solid 2px #cccccc;
+    margin-right: 10px;
+}
+
+.socialMedia .twitter{
+    color: #00aaec;
+    background-image: url(../img/twitterIcon.png);
+    background-repeat: no-repeat;
+    text-indent: 25%;
+    min-width: 90px;
+}
+
+.logoAndMenu{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.logo h1 a{
+    display: block;
+    width: 224px;
+    height: 50px;
+    background-image: url(../img/logo.png);
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.menu > ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu > ul > li{
+    min-width: 100px;
+    text-align: center;
+    margin-left: 10px;
+    border-bottom: solid 5px #FFF;
+    line-height: 50px;
+    position: relative;
+}
+
+.menu > ul > li > a{
+    color: #00cc99;
+}
+
+.menu > ul > li:hover{
+    border-bottom: solid 5px #00cc99;
+}
+
+.dropdown-open{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #00cc99;
+    top: 110%;
+    z-index: 999;
+}
+
+.dropdown-open a{
+    color: #FFF;
+    border: 1px solid #FFF;
+    border-top: 0px;
+}
+
+.dropdown-open a:hover{
+    color: #000;
+}
+
+@media only screen and (max-width: 667px) {
+    .socialMedia{
+        justify-content: center;
+    }
+
+    .logoAndMenu{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu > ul{
+        flex-direction: column;
+    }
+
+    .menu > ul > li{
+        width: 50%;
+    }
+}
+
+/***********/
+/* Content */
+/***********/
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* banner */
+
+.banner{
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/*Swiper optimized*/
+
+.swiper {
+    width: 100%;
+}
+
+:root{
+    --swiper-theme-color: #00CC99;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    padding: 0% 3% 0% 1%;
+    opacity: 0.5;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    opacity: 1;
+}
+
+
+@media only screen and (max-width: 667px) {
+    .banner{
+        margin-bottom: 20px;
+    }
+}
+
+/* intro cards */
+
+.intro ul{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.intro ul li{
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 25px 20px;
+    border-radius: 1%;
+    box-shadow: 0px 3px 5px #dbdbdb;
+}
+
+@media only screen and (max-width: 667px) {
+    .intro ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .intro ul li{
+        width: 85%;
+        margin: 15px 10px;
+        padding: 10px 15px;
+    }
+}
+
+.introImg{
+    height: 139px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.introDescription h2{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 36px;
+}
+
+.introDescription p{
+    line-height: 24px;
+}
+
+.jQuery p{
+    margin-left: -10%;
+}
+
+/* table */
+
+.onlineVsOffline{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+}
+
+.onlineVsOffline h2{
+    text-align: center;
+    font-size: 26px;
+    font-weight: bolder;
+    line-height: 70px;
+}
+
+.tableTitle{
+    background-color: #f7f7f7;
+    font-weight: bolder;
+    border-top: solid 1px #dddddd;
+}
+
+td{
+    font-size: 16px;
+    line-height: 40px;
+    border-bottom: solid 1px #dddddd;
+}
+
+.green{
+    color: #00cc99;
+}
+
+@media only screen and (max-width: 667px) {
+    .onlineVsOffline{
+        margin-bottom: 30px;
+    }
+}
+
+
+/********/
+/* Form */
+/********/
+
+.form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    background: linear-gradient(#00644b,#009872);
+    padding: 50px 50px 0px 50px;
+}
+
+.form h2{
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+    color:#FFF;
+    margin-bottom: 30px;
+}
+
+.form .information{
+    display: flex;
+    width: 100%;
+    color:#FFF;
+}
+
+#introdution{
+    width: 50%;
+    min-height: 50%;
+    margin-right: 30px;
+    padding-left: 10px;
+    font-size: 20px;
+    line-height: 24px;
+    border: none;
+    border-radius: 3px;
+}
+
+#introdution:focus{
+    outline: none;
+    box-shadow: 0px 0px 10px #00cc99;
+}
+
+.form .information .formControl{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    line-height: 24px;
+}
+
+.form .information .formControl label{
+    margin-bottom: 5px;
+}
+
+.form .information .formControl input{
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 32px;
+    border: none;
+    border-radius: 3px;
+}
+
+.form .information .formControl input:focus{
+    outline: none;
+    box-shadow: 0px 0px 10px #00cc99;
+}
+
+.form .information .formControl .submit{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form .information .formControl .btnSubmit{
+    width: 100px;
+    margin-bottom: unset;
+    color:#FFF;
+    font-size: 18px;
+    background-color: #00cc99;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+.form .information .formControl .btnSubmit:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #00cc99;
+}
+
+@media only screen and (max-width: 667px) {
+    .form{
+        width: 100%;
+        padding: 30px 30px 0px 30px;
+    }
+
+    .form h2{
+        margin-bottom: 10px;
+    }
+
+    .form .information{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #introdution{
+        width: 75%;
+        height: 100px;
+        margin-right: unset;
+        margin-bottom: 20px;
+    }
+
+    .form .information .formControl{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 75%;
+        line-height: 24px;
+    }
+
+    .form .information .formControl input{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .form .information .formControl .submit{
+        margin-bottom: 20px;
+    }
+    
+    .form .information .formControl .submit .btnSubmit{
+        padding: 5px;
+    }
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footerLogo a{
+    width: 171px;
+    height: 36px;
+    margin-left: 20px;
+    background-image: url(../img/footerLogo.png);
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.contactUs{
+    margin-right: 20px;
+    line-height: 24px;
+}
+
+.magenta{
+    color: #e12d80;
+}
+
+@media only screen and (max-width: 667px) {
+    .footer{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .contactUs{
+        line-height: 24px;
+        margin-right: unset;
+        margin-bottom: 10px;
+    }
+}
+
+i{
+    position: fixed;
+    font-size: 36px;
+    color: #00cc99;
+    bottom: 10px;
+    right: 30px;
+    cursor: pointer;
+}
