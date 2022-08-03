@@ -123,7 +123,6 @@ a{
 }
 
 .menu > ul{
-    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -149,7 +148,6 @@ a{
 .dropdown-open{
     display: none;
     position: absolute;
-    width: 100%;
     background-color: #00cc99;
     top: 110%;
     z-index: 999;
@@ -353,11 +351,10 @@ td{
 
 .form .information{
     display: flex;
-    width: 100%;
     color:#FFF;
 }
 
-#introdution{
+.formQuestion{
     width: 50%;
     min-height: 50%;
     margin-right: 30px;
@@ -368,24 +365,21 @@ td{
     border-radius: 3px;
 }
 
-#introdution:focus{
+.formQuestion:focus{
     outline: none;
     box-shadow: 0px 0px 10px #00cc99;
 }
 
-.form .information .formControl{
+.formControl{
     display: flex;
     flex-direction: column;
     width: 50%;
     line-height: 24px;
 }
-
-.form .information .formControl label{
+.formControl label{
     margin-bottom: 5px;
 }
-
-.form .information .formControl input{
-    width: 100%;
+.formControl input{
     padding-left: 10px;
     margin-bottom: 20px;
     font-size: 16px;
@@ -394,17 +388,17 @@ td{
     border-radius: 3px;
 }
 
-.form .information .formControl input:focus{
+.formControl input:focus{
     outline: none;
     box-shadow: 0px 0px 10px #00cc99;
 }
 
-.form .information .formControl .submit{
+.submit{
     display: flex;
     justify-content: flex-end;
 }
 
-.form .information .formControl .btnSubmit{
+.formControl .btnSubmit{
     width: 100px;
     margin-bottom: unset;
     color:#FFF;
@@ -416,14 +410,13 @@ td{
 }
 
 
-.form .information .formControl .btnSubmit:hover{
+.formControl .btnSubmit:hover{
     cursor: pointer;
     box-shadow: 0px 0px 10px #00cc99;
 }
 
 @media only screen and (max-width: 667px) {
     .form{
-        width: 100%;
         padding: 30px 30px 0px 30px;
     }
 
@@ -436,14 +429,14 @@ td{
         align-items: center;
     }
 
-    #introdution{
+    .formQuestion{
         width: 75%;
         height: 100px;
         margin-right: unset;
         margin-bottom: 20px;
     }
 
-    .form .information .formControl{
+    .formControl{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -451,16 +444,15 @@ td{
         line-height: 24px;
     }
 
-    .form .information .formControl input{
-        width: 100%;
+    .formControl input{
         margin-bottom: 10px;
     }
 
-    .form .information .formControl .submit{
+    .submit{
         margin-bottom: 20px;
     }
     
-    .form .information .formControl .submit .btnSubmit{
+    .formControl .submit .btnSubmit{
         padding: 5px;
     }
 }
