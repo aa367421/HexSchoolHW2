@@ -149,6 +149,7 @@ a{
 }
 
 .dropdown-open{
+    width: 100%;
     display: none;
     position: absolute;
     background-color: #00cc99;
